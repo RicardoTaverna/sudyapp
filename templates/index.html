@@ -21,11 +21,17 @@
         <!-- Background Video-->
         <video class="bg-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"><source src="/static/home/assets/mp4/bg.mp4" type="video/mp4" /></video>
         <!-- Masthead-->
-        {% block home %}
-        {% endblock home %}
+        <div class="masthead">
+            <div class="masthead-content text-white">
+                <div class="container-fluid px-4 px-lg-0">
+                    {% block home %}
+                    {% endblock home %}
 
-        {% block login %}
-        {% endblock login %}
+                    {% block login %}
+                    {% endblock login %}
+                </div>
+            </div>
+        </div>
         <!-- Social Icons-->
         <!-- For more icon options, visit https://fontawesome.com/icons?d=gallery&p=2&s=brands-->
         <div class="social-icons">
