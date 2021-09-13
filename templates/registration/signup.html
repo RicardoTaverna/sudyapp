@@ -1,0 +1,52 @@
+{% extends "index.html" %}
+
+{% block login %}
+
+    
+    <div class="container">
+        <div class="col" style="width: 100%; max-width: 330px; margin: auto;">
+            <h1 class="fst-italic lh-1 mb-4">SudyApp</h1>
+            <h3 class="mb-3">Cadastrar</h3>
+            <form class="form-signin mt-3" method="POST">
+                {% csrf_token %}
+
+                <div class="mb-2">
+                    <label for="inputEmail" class="sr-only">UserName</label>
+                    <input class="form-control" type="text" name="username" placeholder="Nome Usuário" required
+                        autofocus>
+                </div>
+                <div class="mb-2">
+                    <label for="inputEmail" class="sr-only">Email</label>
+                    <input class="form-control" type="email" name="email" placeholder="E-mail" required>
+                </div>
+                <div>
+                    <label for="inputPassword" class="sr-only">Senha</label>
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Senha"
+                        name="password1" required>
+                </div>
+                <div>
+                    <label for="inputPassword" class="sr-only">Confirmar Senha</label>
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Confirmar Senha"
+                        name="password2" required>
+                </div>
+
+                {% for message in messages %}
+                <div class="mt-3 mb-3">
+                    <p id="messages" class="text-danger">{{ message }}</p>
+                </div>
+                {% endfor %}
+
+                <div class="small">
+                    Já possui sua conta? <a class="text-primary" href="{% url 'login' %}">Login</a>
+                </div>
+
+
+                <button class="mt-3 btn btn-lg btn-primary btn-block" type="submit">Criar</button>
+            </form>
+            
+        </div>
+    </div>
+    
+
+
+{% endblock %}
