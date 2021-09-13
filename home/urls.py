@@ -3,5 +3,5 @@ from .views import home
 
 urlpatterns = [
     path('', home, name='home'),
-    path('conta/', include('django.contrib.auth.urls'))
+    path('', include('django.contrib.auth.urls'))
 ]
