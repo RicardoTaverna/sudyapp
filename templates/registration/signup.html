@@ -10,21 +10,21 @@
             <form class="form-signin mt-3" method="POST">
                 {% csrf_token %}
 
-                <div class="mb-2">
+                <div class="col mb-2">
                     <label for="inputEmail" class="sr-only">UserName</label>
                     <input class="form-control" type="text" name="username" placeholder="Nome Usuário" required
                         autofocus>
                 </div>
-                <div class="mb-2">
+                <div class="col mb-2">
                     <label for="inputEmail" class="sr-only">Email</label>
                     <input class="form-control" type="email" name="email" placeholder="E-mail" required>
                 </div>
-                <div>
+                <div class="col mb-2">
                     <label for="inputPassword" class="sr-only">Senha</label>
                     <input type="password" id="inputPassword" class="form-control" placeholder="Senha"
                         name="password1" required>
                 </div>
-                <div>
+                <div class="col mb-2">
                     <label for="inputPassword" class="sr-only">Confirmar Senha</label>
                     <input type="password" id="inputPassword" class="form-control" placeholder="Confirmar Senha"
                         name="password2" required>
@@ -36,7 +36,7 @@
                 </div>
                 {% endfor %}
 
-                <div class="small">
+                <div>
                     Já possui sua conta? <a class="text-primary" href="{% url 'login' %}">Login</a>
                 </div>
 
