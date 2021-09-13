@@ -4,7 +4,7 @@
 
     
     <div class="container">
-        <div class="col">
+        <div class="col" style="width: 100%; max-width: 330px; margin: auto;">
             {% if form.errors %}
             <p>Your username and password didn't match. Please try again.</p>
             {% endif %}
@@ -17,7 +17,7 @@
                 <p>Please login to see this page.</p>
                 {% endif %}
             {% endif %}
-            <form mt-3" method="POST" style="width: 100%; max-width: 220px; margin: auto;">
+            <form mt-3" method="POST">
                 {% csrf_token %}
                 <div class="mb-2">
                     <label for="inputEmail" class="sr-only">UserName</label>
